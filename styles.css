@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.ancho {
+    max-width: 1200px;
+    margin: auto;
+    border: 1px red solid;
+}
+body{
+    font-family: helvetica;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+}
+.margen {
+padding: 15px;
+}
+.informacion{
+    display: flex;
+    justify-content: space-between;
+    /*los hijos quedadn del mismo tamaño*/
+    align-items: stretch; 
+    flex-direction: row;
+}
+.contenido_izquierdo{
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    align-items: start;
+    width: 450px;
+    border: 1px solid red;
+}
+.contenido_izquierdo h2{
+    line-height: 30px;
+    margin: 10px 0 10px;
+}
+.contenido_izquierdo .rojo{
+    font-size: 16px;
+    color: red;
+}
+.contenido_izquierdo p{
+    font-size: 18px;
+    color: black;
+    justify-content: start;
+    margin-bottom: 20px;
+} 
+.botton a{
+    display: inline block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+
+/*articulos*/
+.contendio_derecho{
+    border: 1px solid red;
+    width: 550px; 
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    gap: 50px;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+.articulo{
+    border: 2px orange solid;
+    padding: 10px;
+    width: 40%;
+}
+.contendio_derecho h3{
+    padding: 20px 10px;
+}
+.contendio_derecho i{
+    font-size: 40px;
+    color: red;
+}
+
+/*seccion de mq*/
+/*aqu se pone solo lo que se va a cambiar*/
+
+/*movil*/
+@media (max-width: 850px) {
+    .informacion{
+    justify-content: space-between;
+    /*los hijos quedadn del mismo tamaño*/
+    align-items: center; 
+    flex-direction: column;
+    gap: 50px;
+}
+    .contenido_izquierdo{
+    width: 100%;
+}
+}
+/*tabet*/
+@media (max-width: 480px) {
+ .contendio_derecho{
+    width: 100%; 
+    flex-direction: column; 
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+.articulo{
+    width: 100%;
+}
+}
+
